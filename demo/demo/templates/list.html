@@ -1,0 +1,18 @@
+<html>
+<body>
+    {% if stu %}
+        <p>Found {{ stu|length }} student{{ stu|pluralize }}.</p>
+        <ul>
+            {% for s in stu %}
+                <li>{{ s.id }}</li>
+                <li>{{ s.name }}</li>
+                <li>{{ s.score }}</li>
+                <hr/>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No students matched your search criteria.</p>
+    {% endif %}
+</body>
+</html> 
+<!--k,v可用value.0,value.1-->

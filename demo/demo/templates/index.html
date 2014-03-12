@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>demo page</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+ <!-- <script  language="javascript" src="./public/jquery-1.7.2.min.js"></script> -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#search").click(function(){
+                var name=$("#name").val();
+                console.info('click!')
+                $.ajax({
+                    type: 'GET',
+                    dataType: 'json',
+                    url: '/demo/' ,
+                    data:"name="+name,
+                    success: function(data){
+                        console.info(data)
+                        $("#display").html(data['stuid']+","+data['name']+","+data['score'])
+                        // $("#display").html(data[1]+data[2])
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="name"></input>
+    <button id="search" type="button">search</button>
+    <p id="display">This will be ret</p>
+
+    <!-- <form id="stu_form" action="/search/" method="post">
+        name:<input type="text" name="name"/><br/>
+        score:<input type="text" name="score"/><br/>
+        <input type="submit" id="submit" value="submit"></input>
+    </form> -->
+
+</body>
+</html>
