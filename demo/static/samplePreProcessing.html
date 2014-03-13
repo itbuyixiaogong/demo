@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="jiqian">
+    <script  language="javascript" src="./public/jquery-1.7.2.min.js"></script>
+    <script src="./public/jquery.form.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#samplePreProcessingForm').ajaxForm(function(){
+                alert("insert success!");
+            });
+            // $('#receptionAndStorageForm').clearForm();
+        });
+    </script>
+
+  <style>
+    body{font-size:12px;background-color:yellow}
+	h1{text-align:center}
+	input{font-size:15px}
+	p{text-align:center}
+	p input{width:60px;height:35px;font-size:20px}
+   </style>
+ </HEAD>
+
+ <BODY>
+ <h1>来样预加工</h1>
+ <br/>
+   <form id="samplePreProcessingForm" action="/samplePreProcessing/" method="POST">
+    <table border="1" align="center">
+     <caption><b>来样送预加工</b></caption>
+	 <tr>
+      <th>送预加工负责人</th>
+	  <!--定义单行的输入字段，用户可在其中输入文本。默认宽度为 20 个字符。-->
+	  <td><input type="text" name="sendSamplePersonInCharge" /></td>
+     </tr>
+	 <tr>
+      <th>送预加工时间</th>
+	  <td><input type="text" name="sendSampleTime" /></td>
+     </tr>
+	 <tr>
+      <th>预计预加工结束时间</th>
+	  <td><input type="text" name="predictPreProcessingTime" /></td>
+	 </tr>
+   </table>
+   <br/>
+
+   <table border="1" align="center">
+     <caption><b>余样保存</b></caption>
+      <tr>
+       <th>保存位置</th>
+	   <td><input type="text" name="storageLocation" /></td>
+	  </tr>
+	  <tr>
+	   <th>保存负责人</th>
+	   <td><input type="text" name="storagePersonInCharge" /></td>
+	  </tr>
+   </table>
+   <br/>
+
+   <table border="1" align="center">
+     <caption><b>预加工样送实验室</b></caption>
+	  <tr>
+       <th>接收负责人</th>
+	   <td> <input type="text" name="receivePersonInCharge" /></td>
+	  </tr>
+	  <tr>
+	   <th>接收时间</th>
+	   <td> <input type="text" name="receiveTime" /></td>
+      </tr>
+   </table>
+   <br/> 
+   <p>
+    <input type="submit" value="提交">
+   </p>
+   </form>
+ </BODY>
+</HTML>
+
+
+ <BODY>
+  
+ </BODY>
+</HTML>

@@ -1,8 +1,10 @@
 <html>
-
 <head>
     <title>demo page</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+ <!--   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script> -->
+    <script  language="javascript" src="./public/jquery-1.7.2.min.js"></script>
+    <script src="./public/jquery.form.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("#search").click(function(){
@@ -15,31 +17,16 @@
                     success: function(data){
                         console.info(data)
                         $("#display").html(data['stuid']+","+data['name']+","+data['score'])
-                        alert("dfg")
                         // $("#display").html(data[1]+data[2])
                     } ,
                     dataType: 'json'
                 });
             });
 
-            $("#stu_form").submit(function(){
-                console.info('click!')
-                var stuid=$("#stuid").val();
-                var name=$("#name").val();
-                var score=$("#score").val();
-                $.ajax({
-                    type: 'POST',
-                    url: '/demo/',
-                    dataType: 'json',
-                    data:{'stuid':stuid,'name':name,'score':score},
-                    success: function(data){
-                        console.info(data)
-                        // $("#insertinfo").html("here")
-                        alert("dfg")
-                    }  
-                });
+            $('#stu_form').ajaxForm(function(){
+                alert("insert success!");
             });
-            
+
         });
     </script>
 </head>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE>receptionAndStorage </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="JiQian">
+  	<script  language="javascript" src="./public/jquery-1.7.2.min.js"></script>
+    <script src="./public/jquery.form.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#receptionAndStorageForm').ajaxForm(function(){
+                alert("insert success!");
+            });
+            // $('#receptionAndStorageForm').clearForm();
+        });
+    </script>
+  <style>
+    body{font-size:12px;background-color:yellow}
+	h1{text-align:center}
+	input{font-size:15px}
+	p{text-align:center}
+	p input{width:60px;height:35px;font-size:20px}
+  </style>
+
+ </HEAD>
+
+ <BODY>
+ <h1>来样接收与保管</h1>
+ <br/>
+   <form id="receptionAndStorageForm" action="/receptionAndStorage/" method="post">
+   	<table border="1" align="center">
+     <caption><b>接受委托</b></caption>
+	 <tr>
+      <th>委托编号</th>
+	  <!--定义单行的输入字段，用户可在其中输入文本。默认宽度为 20 个字符。-->
+	  <td><input type="text" name="delegationNum" /></td>
+     </tr>
+	 <tr>
+      <th>委托单位</th>
+	  <td><input type="text" name="delegationUnit" /></td>
+     </tr>
+	 <tr>
+      <th>委托人姓名</th>
+	  <td><input type="text" name="delegationName" /></td>
+	 </tr>
+	 <tr>
+      <th>委托时间</th>
+	  <td><input type="text" name="delegationTime" /></td>
+	 </tr>
+	 <tr>
+      <th>委托单位地址</th>
+	  <td><input type="text" name="delegationUnitAddr" /></td>   
+	 </tr>
+     <tr>
+      <th>邮编</th>
+	  <td><input type="text" name="delegationZipCode" /></td> 
+	 </tr>
+	 <tr>
+      <th>电话</th>
+	  <td><input type="text" name="delegationTel" /></td>
+	 </tr>
+	 <tr>
+      <th>传真</th>
+	  <td><input type="text" name="delegationFax" /></td> 
+	 </tr>
+	 <tr>
+      <th>银行账户</th>
+	  <td><input type="text" name="delegationAccount" /></td>
+	 </tr>
+	 <tr>
+      <th>账号开户行</th>
+	  <td><input type="text" name="delegationAccountBank" /></td>
+	 </tr>
+	 <tr>
+      <th>账号开户地</th>
+	  <td><input type="text" name="delegationAccountBankAddr" /></td>
+	 </tr>
+	 <tr>
+      <th>项目负责人</th>
+	   <td><input type="text" name="projectPersonInCharge" /></td>
+	 </tr>
+	 <tr>
+      <th>接受委托时间</th>
+	  <td><input type="text" name="entrustedTime" /></td>
+	 </tr>
+   </table>
+   <br/>
+
+   <table border="1" align="center">
+     <caption><b>来样接收</b></caption>
+      <tr>
+       <th>试样编号</th>
+	   <td><input type="text" name="sampleNum" /></td>
+	  </tr>
+	  <tr>
+	   <th>试样材质</th>
+	   <td><input type="text" name="sampleMaterial" /></td>
+	  </tr>
+	  <tr>
+	   <th>试样尺寸</th>
+	   <td><input type="text" name="sampleSize" /></td>
+	  </tr>
+	  <tr>
+	   <th>试样数据</th>
+	   <td> <input type="text" name="sampleData" /></td>
+	  </tr>
+	  <tr>
+	   <th>试样钢级</th>
+	   <td> <input type="text" name="sampleGrade" /></td>
+	  </tr>
+      <tr>
+	   <th>试样规格</th>
+	   <td> <input type="text" name="sampleStandard" /></td>
+      </tr>
+   </table>
+   <br/>
+
+   <table border="1" align="center">
+     <caption><b>来样保管</b></caption>
+	  <tr>
+       <th>保管位置</th>
+	   <td> <input type="text" name="storageLocation" /></td>
+	  </tr>
+	  <tr>
+	   <th>保管负责人</th>
+	   <td> <input type="text" name="storagePersoInCharge" /></td>
+      </tr>
+   </table>
+   <br/> 
+    <p>
+    	<input type="submit" value="提交">
+	</p>
+   </form>
+ </BODY>
+</HTML>

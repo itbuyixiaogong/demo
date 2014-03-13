@@ -1,0 +1,7 @@
+v1:本次主要实现了静态页面与后台的交互,主要看一下
+前台：static/receptionAndStorage.html,sampleExperiment.html,samplePreProcessing.html中的内容，交互代码主要就是添加了js代码
+后台：
+数据库模板在samples.models.py,用于定义数据库表
+函数实现在demo.views.py
+函数地址绑定在url s.py
+配置文件在settings.py,包括模板，数据库配置

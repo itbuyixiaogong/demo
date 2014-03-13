@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="jiqian">
+  	<script  language="javascript" src="./public/jquery-1.7.2.min.js"></script>
+    <script src="./public/jquery.form.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#sampleExperimentForm').ajaxForm(function(){
+                alert("insert success!");
+            });
+            // $('#receptionAndStorageForm').clearForm();
+        });
+    </script>
+  <style>
+    body{font-size:12px;background-color:yellow}
+	h1{text-align:center}
+	input{font-size:15px}
+	p{text-align:center}
+	p input{width:160px;height:35px;font-size:20px}
+   </style>
+ </HEAD>
+
+ <BODY>
+ <h1>来样实验</h1>
+ <br/>
+   <form id="sampleExperimentForm" action="/sampleExperiment/" method="get">
+    <table border="1" align="center">
+     <caption><b>接收并安排计划</b></caption>
+     <tr>
+      <th>实验项目</th>
+	  <td><input type="text" name="predictExperimentItem" /></td>
+	 </tr>
+	 <tr>
+      <th>实验类型</th>
+	  <td><input type="text" name="experimentType" /></td>
+	 </tr>
+	 <tr>
+      <th>实验负责人</th>
+	  <!--定义单行的输入字段，用户可在其中输入文本。默认宽度为 20 个字符。-->
+	  <td><input type="text" name="experimentPersonInCharge" /></td>
+     </tr>
+	 <tr>
+      <th>实验位置</th>
+	  <td><input type="text" name="experimentLocation" /></td>
+     </tr> 
+	 <tr>
+      <th>检测标准</th>
+	  <td><input type="text" name="testingStandard" /></td>
+	 </tr>
+	 <tr>
+      <th>预计实验开始时间</th>
+	  <td><input type="text" name="predictExperimentStartTime" /></td>
+	 </tr>
+	 <tr>
+      <th>预计实验结束时间</th>
+	  <td><input type="text" name="predictExperimentFinishTime" /></td>
+	 </tr>
+   </table>
+   <br/>
+
+   <table border="1" align="center">
+     <caption><b>实验异常处理</b></caption>
+      <tr>
+       <th>异常原因</th>
+	   <td><input type="text" name="abnormalReasons" /></td>
+	  </tr>
+	  <tr>
+	   <th>异常时间</th>
+	   <td><input type="text" name="abnormalTime" /></td>
+	  </tr>
+	   <tr>
+	   <th>备注</th>
+	   <td><input type="text" name="remark" /></td>
+	  </tr>
+   </table>
+   <br/>
+
+   <table border="1" align="center">
+     <caption><b>实验结果输出</b></caption>
+	  <tr>
+       <th>样品实验结果描述</th>
+	   <td> <input type="text" name="resultDescribe" value="请输入实验结果描述"/></td>
+	  </tr>
+	  <tr>
+	   <th>样品实验结果图像</th> 
+	   <td> <input type="file" name="resultImg" accept="image/*"/></td>
+	  </tr>
+	  <tr>
+	   <th>样品实验结果报告</th>
+	   <td> <input type="file" name="resultReport"accept="file/*"/></td>
+      </tr>
+   </table>
+   <br/> 
+   <p>
+    <input type="submit" value="通知项目负责人">
+   </p>
+   </form>
+ </BODY>
+</HTML>
+
+
+ <BODY>
+  
+ </BODY>
+</HTML>
